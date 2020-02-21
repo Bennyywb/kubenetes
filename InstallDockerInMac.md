@@ -42,7 +42,6 @@ $ kubectl cluster-info
 $ kubectl get nodes
 ```
 
-
 # 步骤4、安装Kubernetes  dashboard
 1. 部署 kubernetes-dashboard.yaml
 ```
@@ -56,9 +55,9 @@ $ kubectl proxy
 > http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
 4. 获取token
 ```
-TOKEN=$(kubectl -n kube-system describe secret default| awk '$1=="token:"{print $2}')
+$ TOKEN=$(kubectl -n kube-system describe secret default| awk '$1=="token:"{print $2}')
 kubectl config set-credentials docker-desktop --token="${TOKEN}"
-echo $TOKEN
+$ echo $TOKEN
 ```
 > eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlLXN5c3RlbSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJkZWZhdWx0LXRva2VuLXN2NHZwIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImRlZmF1bHQiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiJmNWM1ZGI1MC1jZjMxLTRkMmYtOWRjOS0zMGI5NDE0ZWJiODciLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZS1zeXN0ZW06ZGVmYXVsdCJ9.eu75_e8-qmctu34dd-DB3GyYlZwCXfMqhfq5ohJ1rLTOU0dnrOHFjCfLpyyDSTtzB9YNhPYIG4t5hO3ucDywMncjwOuic2RhQqZT_FiU0UVvngy4BT_tbPdNHIRG07GQxsCDYsECynZnpWHBr8qaiRMRAV9gDFiRFjLlZT4csUs7vL65dhv1UZ3_U-tZ5jnJfTHrhPi907XhySETElJvYL-TuPcc3i4dosL7JIXFnGbBy5UIk-av3ll41VvcUjgWQZ931M40oUWdXWaJZlbp8A0Q4fKjYOk6wbLnJeUVu6ewGSinqM4-NZWLgY95qtOr7M27nyRs56_flQNHG0PKiA
 
