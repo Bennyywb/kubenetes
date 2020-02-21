@@ -1,6 +1,8 @@
 Mac环境安装Docker
 
-docker hub ID:ybenny, PSW:446688225
+前期准备：
+申请Docker hub ID
+
 步骤1：安装 Docker Desktop
 1、命令直接下载：$ brew cask install docker
 2、官网下载：https://hub.docker.com/editions/community/docker-ce-desktop-mac
