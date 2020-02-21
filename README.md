@@ -25,7 +25,7 @@
 # 步骤3：下载 Kubernetes 镜像
 1. 拉取github仓库
 ```
-git clone https://github.com/maguowei/k8s-docker-for-mac.git
+$ git clone https://github.com/maguowei/k8s-docker-for-mac.git
 ```
 2. 拉取镜像
 ```
@@ -37,18 +37,20 @@ $ ./load_images.sh
 $ docker images
 ```
 4. 验证是否安装成功
+```
 $ kubectl cluster-info
 $ kubectl get nodes
+```
 
 
 # 步骤4、安装Kubernetes  dashboard
 1. 部署 kubernetes-dashboard.yaml
 ```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
 ```
 2. 开启本机访问代理
 ```
-kubectl proxy
+$ kubectl proxy
 ```
 3. 通过浏览器访问 
 > http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
