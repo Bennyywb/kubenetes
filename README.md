@@ -1,4 +1,4 @@
-docker hub ID:ybenny, PSW:446688225
+提前申请docker hub ID
 
 # 步骤1：安装 Docker Desktop
 1. 命令直接下载：$ brew cask install docker
